@@ -10,6 +10,11 @@ const router = createRouter({
       component: HomeView,
     },
     {
+      path: '/privacy-policy',
+      name: 'privacy-policy',
+      component: () => import('../views/PrivacyPolicy.vue'),
+    },
+    {
       path: '/about',
       name: 'about',
       // route level code-splitting
