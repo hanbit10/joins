@@ -1,3 +1,138 @@
+
+
+<template>
+   <body onload="fillHeaderInitials()">
+    <div class="wholeJoinContainer">
+      <section class="headerAndOpenedContainer">
+        <header>
+          <img class="logoResponsive" src="../assets/img/logo.svg" alt="Logo">
+          <div class="headlineContainer">
+            <span class="headline">Kanban Project Management Tool</span>
+          </div>
+          <div class="helpAndUserContainer">
+            <img src="../assets/img/help.svg" alt="Help" class="helpIcon" onclick="changeHtmlPage('help.html')"/>
+            <div class="initials" id="headerInitials"></div>
+            <div class="menu" id="menu">
+              <a onclick="changeHtmlPage('help.html')" class="helpAtNavBar">Help</a>
+              <a onclick="changeHtmlPage('legal_notice.html')">Legal Notice</a>
+              <a onclick="changeHtmlPage('privacy_policy.html')">Privacy Policy</a>
+              <a href="login.html">Log out</a>
+            </div>
+          </div>
+        </header>
+        <section class="legalNoticeOpenedContainer">
+          <div class="legalNoticeHeadlineAndArrowContainer">
+            <h1 class="legalNoticeHeadline">Legal Notice</h1>
+            <img class="arrowLeftImg" src="../assets/img/arrowLeft.svg" alt="Back" onclick="goBackToLastTabWithoutClosing()"/>
+          </div>
+          <div class="legalNoticeTextContainer">
+            <br>
+            <h2>Imprint</h2>
+            <br>
+            <li>Robin Gerth, Elias Schäfer, Hanbit Chang</li>
+            <li>Hebelweg 63</li>
+            <li>79713 Bad Säckingen</li>
+            <br>
+          </div>
+          <div class="legalNoticeTextContainer">
+            <h2>Exploring the Board</h2>
+            <p>E-Mail: robingerth21@gmail.com</p>
+          </div>
+          <div class="legalNoticeTextContainer">
+            <h2>Acceptance of terms</h2>
+            <p>
+              By accessing and using <a class="joinLink" href="#">Join</a> (Product), you acknowledge and agree to the following terms and conditions, and any policies,
+              guidelines, or amendments thereto that may be presented to you from time to time. We, the listed students, may update or
+              change the terms and conditions from time to time without notice.
+            </p>
+          </div>
+          <div class="legalNoticeTextContainer">
+            <h2>Scope and ownership of the product</h2>
+            <p>
+              <a class="joinLink" href="#">Join</a> has been developed as part of a student group project in a web development bootcamp at the <a class="developerLink" href="https://developerakademie.com/" target="_blank">Developer Akademie GmbH</a>. It
+              has an educational purpose and is not intended for extensive personal & business usage. As such, we cannot guarantee
+              consistent availability, reliability, accuracy, or any other aspect of quality regarding this Product. The design of <a class="joinLink" href="#">Join</a> is
+              owned by the <a class="developerLink" href="https://developerakademie.com/" target="_blank">Developer Akademie GmbH</a>. Unauthorized use, reproduction, modification, distribution, or replication of the design
+              is strictly prohibited.
+            </p>
+          </div>
+          <div class="legalNoticeTextContainer">
+            <h2>Proprietary rights</h2>
+            <p>
+              Aside from the design owned by <a class="developerLink" href="https://developerakademie.com/" target="_blank">Developer Akademie GmbH</a>, we, the listed students, retain all proprietary rights in <a class="joinLink" href="#">Join</a>,
+              including any associated copyrighted material, trademarks, and other proprietary information.
+            </p>
+          </div>
+          <div class="legalNoticeTextContainer">
+            <h2>Use of the product</h2>
+            <p>
+              <a class="joinLink" href="#">Join</a> is intended to be used for lawful purposes only, in accordance with all applicable laws and regulations. Any use of <a class="joinLink" href="#">Join</a>
+              for illegal activities, or to harass, harm, threaten, or intimidate another person, is strictly prohibited. You are solely
+              responsible for your interactions with other users of <a class="joinLink" href="#">Join</a>.
+            </p>
+          </div>
+          <div class="legalNoticeTextContainer">
+            <h2>Disclaimer of warranties and limitations of liability</h2>
+            <p>
+              <a class="joinLink" href="#">Join</a> is intended to be used for lawful purposes only, in accordance with all applicable laws and regulations. Any use of <a class="joinLink" href="#">Join</a>
+              for illegal activities, or to harass, harm, threaten, or intimidate another person, is strictly prohibited. You are solely
+              responsible for your interactions with other users of <a class="joinLink" href="#">Join</a>.
+            </p>
+          </div>
+          <div class="legalNoticeTextContainer">
+            <h2>Indemnity</h2>
+            <p>
+              You agree to indemnify, defend and hold harmless us, the listed students, the <a class="developerLink" href="https://developerakademie.com/" target="_blank">Developer Akademie GmbH</a>, and our affiliates,
+              partners, officers, directors, agents, and employees, from and against any claim, demand, loss, damage, cost, or liability
+              (including reasonable legal fees) arising out of or relating to your use of <a class="joinLink" href="#">Join</a> and/or your breach of this Legal Notice.
+            </p>
+            <p>For any questions or notices, please contact us at robingerth21@web.de.</p>
+            <p>Date: July 26, 2023.</p>
+          </div>
+        </section>
+        <footer class="d-none"></footer>
+      </section>
+      <section class="sideBarContainer">
+        <div class="sideBarLogoContainer">
+          <img class="logoImg" src="../assets/img/logoWhite.svg" alt="Join logo" />
+        </div>
+        <div class="sideBarChooseSectionContainer">
+          <a onclick="changeHtmlPage('summary.html')" class="summaryContainer"
+            ><div class="sideBarImgContainer">
+              <img src="../assets/img/summaryIcon.svg" alt="Summary Icon" class="sideBarImage" />
+            </div>
+            <span class="sideBarText">Summary</span></a
+          >
+          <a onclick="changeHtmlPage('add_task.html')" class="addTaskContainer"
+            ><div class="sideBarImgContainer">
+              <img src="../assets/img/addTaskIcon.svg" alt="Add Task Icon" class="sideBarImage" />
+            </div>
+            <span class="sideBarText">Add Task</span></a
+          >
+          <a onclick="changeHtmlPage('board.html')" class="boardContainer"
+            ><div class="sideBarImgContainer">
+              <img src="../assets/img/boardIcon.svg" alt="Board Icon" class="sideBarImage" />
+            </div>
+            <span class="sideBarText">Board</span></a
+          >
+          <a onclick="changeHtmlPage('contacts.html')" class="contactsContainer"
+            ><div class="sideBarImgContainer">
+              <img src="../assets/img/contactsIcon.svg" alt="../assets Icon" class="sideBarImage" />
+            </div>
+            <span class="sideBarText">Contacts</span></a
+          >
+        </div>
+        <div class="privacyPolicyAndLegalNoticeContainer">
+          <a class="privacyPolicyContainer" @click="privacyPolicy"><span class="privacyPolicyText">Privacy Policy</span></a>
+          <a onclick="changeHtmlPage('legal_notice.html')" class="openedPrivacyPolicyOrLegalNotice"><span class="legalNoticeTextOpened">Legal Notice</span></a>
+        </div>
+      </section>
+    </div>
+  </body>
+  <button @click="home">home</button>
+  <h1>hello</h1>
+</template>
+
 <script lang="ts" setup>
 import { useRouter } from 'vue-router';
 
@@ -7,9 +142,8 @@ function home(){
   router.push('/')
 }
 
-</script>
+function privacyPolicy(){
+  router.push('privacy-policy')
+}
 
-<template>
-  <button @click="home">home</button>
-  <h1>hello</h1>
-</template>
+</script>

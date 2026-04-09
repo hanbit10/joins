@@ -437,7 +437,7 @@
           <a onclick="changeHtmlPage('privacy_policy.html')" class="openedPrivacyPolicyOrLegalNotice">
             <span class="privacyPolicyTextOpened">Privacy Policy</span>
           </a>
-          <a class="legalNoticeContainer" onclick="changeHtmlPage('legal_notice.html')">
+          <a class="legalNoticeContainer" @click="legalNotice">
             <span class="legalNoticeText">Legal Notice</span>
           </a>
         </div>
@@ -446,7 +446,16 @@
   </body>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useRouter } from 'vue-router';
+
+const router = useRouter()
+
+function legalNotice(){
+  router.push('/legal-notice')
+}
+
+</script>
 
 <style scoped>
 .container {
